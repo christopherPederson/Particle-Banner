@@ -1,22 +1,98 @@
-*{
+:root{
     font-family: 'Kanit', sans-serif;
+    --white: rgb(255, 255, 255);
+    --grey: rgb(137, 137, 137);
+    --greyOpaque: rgba(137, 137, 137, 0.3);
+    --green: #206418;
 }
-.banner{
+.dropdown{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 0vh;
+    z-index: 2;
+    background-color: var(--greyOpaque);
+    backdrop-filter: blur(10px);
+    transition: height 0.3s ease-out;
+}
+.dropdown--active{
+    height: 41vh;
+}
+header{
+    width: 100%;
+    height: 10vh;
+    background-image: linear-gradient(var(--white), var(--white), rgba(255, 255, 255, 0));
+
+    position: fixed;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    z-index: 3;
+}
+.header__btn{
+    width: fit-content;
+    height: 10vh;
+    padding: 10px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    width: auto;
-    height: 30vh;
+
+    text-decoration: none;
+    color: var(--green);
 }
-h1{
-    position: absolute;
-    font-size: 20vh;
-    margin: 0;
-    color: rgb(221, 221, 221);
+.header__logo{
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 3vh;
+    color: var(--grey);
+    margin-bottom: 5px;
+}
+.header__logo__dot{
+    color: var(--green);
+} 
+.header__btn--contact{
+    margin-left: auto;
+    
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    background-color: var(--green);
+    color: var(--white);
+}
+.header__btn--contact:hover{
+    background-color: var(--white);
+    color: var(--green);
+}
+.content__banner{
+    width: auto;
+    height: 40vh;
+
+    position: relative;
+    top: 0px;
+    left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     user-select: none;
 }
-#particles-js{
-    height: 30vh;
+.content__banner__title{
+    position: absolute;
+    margin: 0;
+    
+    font-size: 4vw;
+    color: var(--grey);
+}
+.content__banner__particleEffect{
+    height: 40vh;
     width: 100%;
     z-index: 1;
 }

@@ -30,7 +30,7 @@ document.addEventListener('mouseover', (event) => {
         clearTimeout(delayTimeout);
         delayTimeout = setTimeout(() => {
             removeDropdownActive();
-        }, 200);
+        }, 300);
     } else {
         clearTimeout(delayTimeout);
     }
